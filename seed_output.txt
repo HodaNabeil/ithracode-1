@@ -1,0 +1,35 @@
+Start seeding...
+PrismaClientKnownRequestError: 
+Invalid `prisma.user.upsert()` invocation in
+/home/hoda/Desktop/working/ithracode/prisma/seed.ts:20:40
+
+  17 console.log('Start seeding...');
+  18 
+  19 // 1. Create/Upsert Instructor
+→ 20 const instructor = await prisma.user.upsert(
+Can't reach database server at 127.0.0.1:5433
+    at Gr.handleRequestError (/home/hoda/Desktop/working/ithracode/node_modules/.pnpm/@prisma+client@7.6.0_prisma@7.6.0_@types+react-dom@19.2.3_@types+react@19.2.14__@types+_52eca79d831808847f7df451b475b284/node_modules/@prisma/client/src/runtime/RequestHandler.ts:237:13)
+    at Gr.handleAndLogRequestError (/home/hoda/Desktop/working/ithracode/node_modules/.pnpm/@prisma+client@7.6.0_prisma@7.6.0_@types+react-dom@19.2.3_@types+react@19.2.14__@types+_52eca79d831808847f7df451b475b284/node_modules/@prisma/client/src/runtime/RequestHandler.ts:183:12)
+    at Gr.request (/home/hoda/Desktop/working/ithracode/node_modules/.pnpm/@prisma+client@7.6.0_prisma@7.6.0_@types+react-dom@19.2.3_@types+react@19.2.14__@types+_52eca79d831808847f7df451b475b284/node_modules/@prisma/client/src/runtime/RequestHandler.ts:152:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async a (/home/hoda/Desktop/working/ithracode/node_modules/.pnpm/@prisma+client@7.6.0_prisma@7.6.0_@types+react-dom@19.2.3_@types+react@19.2.14__@types+_52eca79d831808847f7df451b475b284/node_modules/@prisma/client/src/runtime/getPrismaClient.ts:938:24)
+    at async main (/home/hoda/Desktop/working/ithracode/prisma/seed.ts:20:22) {
+  code: 'P1001',
+  meta: {
+    modelName: 'User',
+    driverAdapterError: DriverAdapterError: DatabaseNotReachable
+        at PrismaPgAdapter.onError (file:///home/hoda/Desktop/working/ithracode/node_modules/.pnpm/@prisma+adapter-pg@7.6.0/node_modules/@prisma/adapter-pg/dist/index.mjs:642:11)
+        at file:///home/hoda/Desktop/working/ithracode/node_modules/.pnpm/@prisma+adapter-pg@7.6.0/node_modules/@prisma/adapter-pg/dist/index.mjs:684:68
+        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+        at async PrismaPgAdapter.startTransaction (file:///home/hoda/Desktop/working/ithracode/node_modules/.pnpm/@prisma+adapter-pg@7.6.0/node_modules/@prisma/adapter-pg/dist/index.mjs:684:18)
+        at async Vt.#r (/home/hoda/Desktop/working/ithracode/node_modules/.pnpm/@prisma+client@7.6.0_prisma@7.6.0_@types+react-dom@19.2.3_@types+react@19.2.14__@types+_52eca79d831808847f7df451b475b284/node_modules/@prisma/client-engine-runtime/src/transaction-manager/transaction-manager.ts:163:31)
+        at async Vt.startInternalTransaction (/home/hoda/Desktop/working/ithracode/node_modules/.pnpm/@prisma+client@7.6.0_prisma@7.6.0_@types+react-dom@19.2.3_@types+react@19.2.14__@types+_52eca79d831808847f7df451b475b284/node_modules/@prisma/client-engine-runtime/src/transaction-manager/transaction-manager.ts:96:12)
+        at async e.interpretNode (/home/hoda/Desktop/working/ithracode/node_modules/.pnpm/@prisma+client@7.6.0_prisma@7.6.0_@types+react-dom@19.2.3_@types+react@19.2.14__@types+_52eca79d831808847f7df451b475b284/node_modules/@prisma/client-engine-runtime/src/interpreter/query-interpreter.ts:259:33)
+        at async e.run (/home/hoda/Desktop/working/ithracode/node_modules/.pnpm/@prisma+client@7.6.0_prisma@7.6.0_@types+react-dom@19.2.3_@types+react@19.2.14__@types+_52eca79d831808847f7df451b475b284/node_modules/@prisma/client-engine-runtime/src/interpreter/query-interpreter.ts:94:23)
+        at async e.execute (/home/hoda/Desktop/working/ithracode/node_modules/.pnpm/@prisma+client@7.6.0_prisma@7.6.0_@types+react-dom@19.2.3_@types+react@19.2.14__@types+_52eca79d831808847f7df451b475b284/node_modules/@prisma/client/src/runtime/core/engines/client/LocalExecutor.ts:81:12)
+        at async jt.request (/home/hoda/Desktop/working/ithracode/node_modules/.pnpm/@prisma+client@7.6.0_prisma@7.6.0_@types+react-dom@19.2.3_@types+react@19.2.14__@types+_52eca79d831808847f7df451b475b284/node_modules/@prisma/client/src/runtime/core/engines/client/ClientEngine.ts:498:22) {
+      cause: [Object]
+    }
+  },
+  clientVersion: '7.6.0'
+}
